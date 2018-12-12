@@ -1,0 +1,23 @@
+{
+  "name": "goodsdetect",
+  "version": "1.0.0",
+  "description": "web page to find items in pictures ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skgndi12/GoodsDetect_using_nodejs.git"
+},
+"author": "Kim Sung Won, Kim Ji Ye, Kim Hye Rim",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "path": "^0.12.7",
+    "request": "^2.88.0",
+    "ws": "^6.1.2"
+  }
+}
