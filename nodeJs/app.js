@@ -13,7 +13,9 @@ app.engine('html', require('ejs').renderFile);
 app.use(express.static(path.join(__dirname, 'public')));
 app.set('views', path.join(__dirname, 'public/view'));
 
-
+app.use(function(err, req, res, next) {
+  console.log("[APP]:ERR > " + err);
+})
 app.listen(nPort, function () {
   console.log('app listening on port ' + nPort);
 });
