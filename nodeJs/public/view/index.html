@@ -98,4 +98,15 @@
 					var map = new naver.maps.Map('right', mapOptions);
 
 					var marker = new Array(5);
-					
+					var textString = '';
+					for(var i = 0; i < result.length; i++)
+					{
+						var tm128 = new naver.maps.Point(result[i].mapx, result[i].mapy);
+						var naverpoint = naver.maps.TransCoord.fromTM128ToNaver(tm128);
+						var latlng = naver.maps.TransCoord.fromNaverToLatLng(naverpoint);
+						marker[i] = new naver.maps.Marker({
+							position : new naver.maps.LatLng(latlng),
+							map : map
+						});
+
+						
