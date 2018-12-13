@@ -8,6 +8,7 @@
   <meta name="Author" content="">
   <meta name="Keywords" content="">
   <meta name="Description" content="">
+  
   <title>영통구 음식점 추천</title>
   <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=6u4gqwh2ta"></script>
   <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=6u4gqwh2ta&submodules=geocoder"></script>
@@ -15,13 +16,12 @@
  <body>
 	<div id = "title">
 		<br>
-		<h2><strong><center>영통구 음식점 추천 페이지</center></strong></h2>
-		<br>
+		<h2><center>영통구 음식점 추천 페이지<br><img width="100;" height="70;" src="khu.png"/>
+</center></h2>
+		
 	</div>
-
 	<div class = "left">
-		<strong>선택하세요!</strong>
-		<br>
+		<br>선택하세요!
 		<br>
 		<div id = "left_left" class = "left">
 			<br>
@@ -45,15 +45,15 @@
 			<br>
 		</div>
 		<div id = "left_bottom" class = "left">
-			<br>
+			
 			<button onclick = "onClick()">지도에서 확인하기!</button> 
 			<br>
 			<br>
-			<textarea id = "textcontents" cols = "70" rows = "15"></textarea>
+			<textarea id = "textcontents" cols = "60" rows = "10"style="border:7px solid rgb(191, 191, 191);"></textarea>
 		</div>
 	</div>
 
-	<div id = "right" style = "width:900px;height:650px;border:1px dashed #000000;float:right">
+	<div id = "right" style = "width:600px;height:430px;border:7px solid rgb(191, 191, 191);float:right">
 	</div>
 
 	<!--<script type = "text/javascript">
@@ -146,6 +146,73 @@
 		};
 	</script>
 
-	
+	<style type="text/css">
+	body {
+		font-family: '배달의민족 도현';
+		background-color: rgb(230, 243, 255);
+		line-height: 110%;
+
+	}
+	button {
+		width: 220px;
+		font-family: '배달의민족 도현';
+		font-size:20px;
+		background-color: rgb(194, 240, 194);
+		box-sizing: border-box;
+		border: 3px solid rgb(194, 240, 194);
+		border-radius: 4px;
+		padding: 15px 15px 15px 15px; 
+		
+	}
+	select {
+		width: 200px;
+		border: 3px solid rgb(251, 199, 205);
+		border-radius: 4px;
+		font-size: 20px;
+		font-family: '배달의민족 도현';
+		background-color: rgb(251, 199, 205);
+		background-position: 5px 2.5px; 
+		padding: 10px 10px 10px 10px; 	
+	}
+	div
+	#title
+	{
+		width : 200px;
+		height : 400px;
+		float : left;
+		text-align : center;
+		border : 3px solid rgb(230, 243, 255);
+	}
+	.left
+	{
+		font-size: 20px;
+		width : 600px;
+		height : 430px;
+		float : left;
+		text-align : center;
+		border : 7px solid rgb(191, 191, 191);
+	}
+	#left_left
+	{
+		width : 240px;
+		height : 100px;
+		float : left;
+		border : 3px solid rgb(230, 243, 255);
+	}
+	#left_right
+	{
+		width : 240px;
+		height : 100px;
+		float : right;
+		border : 3px solid rgb(230, 243, 255);
+	}
+	#left_bottom
+	{
+		width : 600px;
+		height : 300px;
+		float : left;
+		border : 7px solid rgb(230, 243, 255);
+	}
+	</style>
  </body>
 </html>
