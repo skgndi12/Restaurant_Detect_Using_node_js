@@ -12,5 +12,48 @@
   <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=6u4gqwh2ta"></script>
   <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=6u4gqwh2ta&submodules=geocoder"></script>
  </head>
- 
-</html>
+ <body>
+	<div id = "title">
+		<br>
+		<h2><strong><center>영통구 음식점 추천 페이지</center></strong></h2>
+		<br>
+	</div>
+
+	<div class = "left">
+		<strong>선택하세요!</strong>
+		<br>
+		<br>
+		<div id = "left_left" class = "left">
+			<br>
+			<select name = "dong", id = "dong">
+				<option value = "">동 선택</option>
+				<option value = "영통동">영통동</option>
+				<option value = "매탄동">매탄동</option>
+				<option value = "원천동">원천동</option>
+			</select>
+			<br>
+		</div>
+		<div id = "left_right" class = "left">
+			<br>
+			<select name = "food", id = "food">
+				<option value = "">음식 종류 선택</option>
+				<option value = "한식">한식</option>
+				<option value = "일식">일식</option>
+				<option value = "중식">중식</option>
+				<option value = "양식">양식</option>
+			</select>
+			<br>
+		</div>
+		<div id = "left_bottom" class = "left">
+			<br>
+			<button onclick = "onClick()">지도에서 확인하기!</button> 
+			<br>
+			<br>
+			<textarea id = "textcontents" cols = "70" rows = "15"></textarea>
+		</div>
+	</div>
+
+	<div id = "right" style = "width:900px;height:650px;border:1px dashed #000000;float:right">
+	</div>
+
+	
