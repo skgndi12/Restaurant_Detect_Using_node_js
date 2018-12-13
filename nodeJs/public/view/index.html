@@ -109,4 +109,43 @@
 							map : map
 						});
 
-						
+						textString = textString + '이름 : ' + result[i].title + '\n주소 : ' + result[i].address + '\nTEL) : ' + result[i].telephone + '\n';
+
+						var contentString = [
+							'<div class = iw>',
+							'	<h3><center>' + result[i].title + '</center></h3>',
+							'	<p><font size = "2"> 주소 : ' + result[i].address + '</br>',
+							'	TEL) : ' + result[i].telephone + '</font></p>',
+							'</div>'
+						].join('');
+
+						var infowindow = new naver.maps.InfoWindow({
+							content : contentString,
+							position : new naver.maps.LatLng(latlng)
+						});
+
+						naver.maps.Event.addListener(marker[i], "click", function(e) {
+							if(infowindow.getMap()) {
+								infowindow.close();
+							} else {
+								infowindow.open(map, marker[i]);
+							}
+						});
+					}
+					var textElement = document.getElementById('textcontents');
+					textElement.value = '';
+					textElement.value = textString;
+
+				}
+
+				// error event handler
+				ws.onerror = function(event) {
+					console.log("Server error message: ", event.data);
+				}
+			}
+		};
+	</script>
+
+	
+ </body>
+</html>
