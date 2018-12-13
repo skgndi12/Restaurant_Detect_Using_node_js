@@ -84,4 +84,18 @@
 					ws.send(message);
 				}
 
-				
+				// 서버로 부터 메시지를 수신한다
+				ws.onmessage = function(event) {
+					ws.close();
+					console.log("Server message: ", event.data);
+					var result = JSON.parse(event.data);
+					// result.title, mapx, mapy
+					
+					var mapOptions = {
+						center: new naver.maps.LatLng(37.250899, 127.072985),
+						zoom : 10
+					};
+					var map = new naver.maps.Map('right', mapOptions);
+
+					var marker = new Array(5);
+					
